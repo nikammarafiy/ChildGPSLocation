@@ -1,0 +1,11 @@
+/local.properties
+/.idea/workspace.xml
+.DS_Store
+.idea
+App/build
+*.iml
+.gradle
+build
+analytics_global_tracker_config.xml
+*.keystore
+App/personal-android-key.txt
