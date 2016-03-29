@@ -1,0 +1,19 @@
+# Ignore IDEA project files
+*.iml
+*.ipr
+*.iws
+.idea
+
+# Mac Files
+.DS_Store
+
+# backups
+*~
+*.sw*
+
+node_modules/
+newrelic_agent.log
+
+# Redis database dumps
+dump.rdb
+

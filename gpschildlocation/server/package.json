@@ -1,0 +1,36 @@
+{
+  "name": "lokki-server",
+  "version": "0.1.1",
+  "dependencies": {
+    "apn": "x",
+    "express": "3.x",
+    "gcm": "x",
+    "mpns": "x",
+    "node-uuid": "1.4.x",
+    "convict": "^0.6.1",
+    "redis": "x",
+    "sendgrid": "0.4.x",
+    "tracer": "^0.7.3",
+    "validator": "2.0.x",
+    "method-override": "2.3.5",
+    "body-parser": "~1.13.3",
+    "suspend": "^0.7.0"
+  },
+  "devDependencies": {
+    "nodeunit": "0.9.x",
+    "nodeunit-httpclient": "0.2.x"
+  },
+  "engines": {
+    "node": "4.2.2",
+    "npm": "1.2.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheSoftwareFactory/lokki-server.git"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true
+    }
+  }
+}

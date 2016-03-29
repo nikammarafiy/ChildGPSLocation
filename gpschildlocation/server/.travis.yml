@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - "4.2.2"
+before_install:
+  - npm install -g eslint
+  - npm install -g complexity-report
+env:
+  es6: true
+script:
+  - eslint .
+    # complexity-report can't deal with ES6, so ignore parse errors
+  - cr --ignoreerrors . -x /node_modules  
+  - node unittest-runner.js
+services:
+  - redis-server
+cache:
+  directories:
+    - node_modules
+# http://blog.travis-ci.com/2014-12-17-faster-builds-with-container-based-infrastructure/
+sudo: false
+deploy:
+  provider: heroku
+  app: lokki-dev
+  on:
+    repo: TheSoftwareFactory/lokki-server
+  api_key:
+    secure: "g6gB8FPrEFIbzRKB16VwpuaObu4m53gnHLG+b5dUXBajVWC6qs2IhxUAH4Hkgo+HMEoWcEYlcbefZx6qNHX0yK6T4nqWoZ1K42BEWQWzQ6J7lk0DCJzOdHG8PM+sjByFphUtOJxasNsjJrfX1gQ9TxrCfSbdtDiP9JXukYGbA7s=" 
